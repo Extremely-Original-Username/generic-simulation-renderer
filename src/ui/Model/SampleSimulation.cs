@@ -5,12 +5,12 @@ namespace ui.Model
 {
     public class SampleSimulation : BaseSimulationEngine
     {
-        public SampleSimulation() : base ("./sampleImage.png")
+        public SampleSimulation() : base ("./favicon.png")
         {
 
         }
 
-        public void FlipPngImage()
+        private void FlipPngImage()
         {
             // Flip the image vertically
             _image.Mutate(x => x.Flip(FlipMode.Horizontal));

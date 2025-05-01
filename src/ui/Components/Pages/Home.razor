@@ -2,24 +2,35 @@
 @rendermode InteractiveServer
 @inject IJSRuntime JS
 @inject ILogger<Home> Logger
+@using Model
 
 <PageTitle>Home</PageTitle>
 
 <div class="renderPanel">
     <h1>Hello, world!</h1>
 
-    <img src="favicon.png" alt="Simulation Rendering" style="width: 90%; margin: auto;"/>
+    <img  src="@imgSrc" alt="Simulation Rendering" style="width: 90%; margin: auto;"/>
 </div>
 
 <div class="toolsPanel">
     <button class="btn btn-primary" @onclick="TestFunc">Test Button (@test)</button>
     @code {
+        private SampleSimulation simulation = new SampleSimulation();
+        private string imgSrc = "favicon.png";
         private int test = 0;
+
+        protected override async Task OnInitializedAsync()
+        {
+            simulation.OnStep += (() => imgSrc = "data:image;base64," + simulation.getImageBase64());
+        }
+
         public void TestFunc()
         {
             test++;
             Logger.LogInformation("TEST");
             JS.InvokeVoidAsync("TestJsFunc");
+
+            simulation.run(1);
         }
     }
 

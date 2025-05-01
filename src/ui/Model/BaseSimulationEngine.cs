@@ -16,11 +16,11 @@ namespace ui.Model
             _image = Image.Load(imageLocation);
         }
 
-        protected string getImageBase64(PngFormat format)
+        public string getImageBase64()
         {
             using (MemoryStream ms = new MemoryStream())
             {
-                _image.Save(ms, format);
+                _image.Save(ms, PngFormat.Instance);
                 byte[] imageBytes = ms.ToArray();
                 return Convert.ToBase64String(imageBytes);
             }
@@ -36,10 +36,5 @@ namespace ui.Model
         }
 
         protected abstract void step();
-
-        string ISimulationEngine.getImageBase64(PngFormat format)
-        {
-            return getImageBase64(format);
-        }
     }
 }

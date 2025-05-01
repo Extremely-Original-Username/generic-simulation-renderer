@@ -8,6 +8,6 @@ namespace ui.Model
         public event  OnStepHandler OnStep;
 
         public void run(int iterations);
-        public string getImageBase64(PngFormat format);
+        public string getImageBase64();
     }
 }
