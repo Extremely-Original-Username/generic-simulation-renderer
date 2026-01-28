@@ -1,7 +1,5 @@
 ﻿@page "/"
-@rendermode InteractiveServer
 @inject IJSRuntime JS
-@inject ILogger<Home> Logger
 @using Model
 
 <PageTitle>Home</PageTitle>
@@ -13,36 +11,27 @@
 </div>
 
 <div class="toolsPanel">
-    <button class="btn btn-primary" @onclick="TestFunc">Test Button (@test)</button>
-    <button class="btn btn-primary">Start</button>
+    <button class="btn btn-primary" @onclick="RunSimulation">Start</button>
     <div class="labelledInput">
         <label for="frameCount">Frames:</label>
-        <input id="frameCount" type="number">
+        <input id="frameCount" type="number" @bind="frames">
     </div>
-
-    <script>
-        function TestJsFunc(){
-            console.log("TEST");
-        }
-    </script>
 </div>
 
 @code {
     private SampleSimulation simulation = new SampleSimulation();
     private string imgSrc = "favicon.png";
-    private int test = 0;
+    private int frames = 10;
 
     protected override async Task OnInitializedAsync()
     {
         simulation.OnStep += (() => imgSrc = "data:image;base64," + simulation.getImageBase64());
+
+        imgSrc = "data:image;base64," + simulation.getImageBase64();
     }
 
-    public void TestFunc()
+    public void RunSimulation()
     {
-        test++;
-        Logger.LogInformation("TEST");
-        JS.InvokeVoidAsync("TestJsFunc");
-
-        simulation.run(1);
+        simulation.run(frames);
     }
 }

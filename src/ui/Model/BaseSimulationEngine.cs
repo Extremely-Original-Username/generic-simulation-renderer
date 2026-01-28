@@ -9,11 +9,11 @@ namespace ui.Model
     public abstract class BaseSimulationEngine : ISimulationEngine
     {
         public event ISimulationEngine.OnStepHandler OnStep;
-        protected Image _image {  get; set; }
+        protected SixLabors.ImageSharp.Image _image {  get; set; }
 
         public BaseSimulationEngine(string imageLocation)
         {
-            _image = Image.Load(imageLocation);
+            _image = SixLabors.ImageSharp.Image.Load(imageLocation);
         }
 
         public string getImageBase64()

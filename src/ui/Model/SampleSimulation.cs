@@ -5,7 +5,7 @@ namespace ui.Model
 {
     public class SampleSimulation : BaseSimulationEngine
     {
-        public SampleSimulation() : base ("./favicon.png")
+        public SampleSimulation() : base ("./Resources/Images/sampleImage.png")
         {
 
         }
