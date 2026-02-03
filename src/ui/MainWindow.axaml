@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ui.MainWindow"
+        Title="ui">
+
+  <Grid RowDefinitions="Auto,Auto"
+        ColumnDefinitions="*">
+
+    <!-- Render Panel -->
+    <StackPanel Grid.Row="0"
+                Margin="20"
+                HorizontalAlignment="Center">
+
+      <TextBlock Text="Hello, world!"
+                 FontSize="24"
+                 Margin="0,0,0,10"
+                 HorizontalAlignment="Center"/>
+
+      <Image x:Name="RenderImage"
+             Width="600"
+             Stretch="Uniform"
+             HorizontalAlignment="Center"/>
+    </StackPanel>
+
+    <!-- Tools Panel -->
+    <StackPanel Grid.Row="1"
+                Orientation="Horizontal"
+                Margin="20"
+                Spacing="10"
+                VerticalAlignment="Top">
+
+      <Button Content="Start"
+              Click="RunSimulation"/>
+
+      <TextBlock Text="Frames:"
+                 VerticalAlignment="Center"/>
+
+      <NumericUpDown x:Name="FramesInput"
+                     Minimum="1"
+                     Maximum="10000"
+                     Value="10"
+                     Width="100"/>
+    </StackPanel>
+
+  </Grid>
+</Window>

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui", "ui\ui.csproj", "{7599F150-AF88-4C08-A5C4-EA940D2DE235}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui", "ui\ui.csproj", "{591C29B0-B998-48AA-B48E-A84D225AD681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "model", "model\model.csproj", "{6387D893-874A-44B0-BE27-CF8BCD063FB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7599F150-AF88-4C08-A5C4-EA940D2DE235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7599F150-AF88-4C08-A5C4-EA940D2DE235}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7599F150-AF88-4C08-A5C4-EA940D2DE235}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7599F150-AF88-4C08-A5C4-EA940D2DE235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591C29B0-B998-48AA-B48E-A84D225AD681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591C29B0-B998-48AA-B48E-A84D225AD681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591C29B0-B998-48AA-B48E-A84D225AD681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591C29B0-B998-48AA-B48E-A84D225AD681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6387D893-874A-44B0-BE27-CF8BCD063FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6387D893-874A-44B0-BE27-CF8BCD063FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6387D893-874A-44B0-BE27-CF8BCD063FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6387D893-874A-44B0-BE27-CF8BCD063FB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B87C8690-D699-4B87-9BE0-516BF5085102}
+		SolutionGuid = {8ABBADB7-2161-463F-BCAB-1873CB91320D}
 	EndGlobalSection
 EndGlobal

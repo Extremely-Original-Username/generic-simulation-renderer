@@ -1,6 +1,6 @@
 ﻿using SixLabors.ImageSharp.Formats.Png;
 
-namespace ui.Model
+namespace model
 {
     public interface ISimulationEngine
     {

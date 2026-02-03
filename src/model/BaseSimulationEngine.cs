@@ -4,7 +4,7 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.PixelFormats;
 
-namespace ui.Model
+namespace model
 {
     public abstract class BaseSimulationEngine : ISimulationEngine
     {

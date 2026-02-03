@@ -1,7 +1,7 @@
 ﻿using SixLabors.ImageSharp.Processing;
 using System;
 
-namespace ui.Model
+namespace model
 {
     public class SampleSimulation : BaseSimulationEngine
     {
